@@ -12,11 +12,12 @@ Pour plus d'information sur la mise en place des modèles et leur évalution, ve
 ## 🔧 Installation
 1. Cloner le dépôt :
    ```bash
-   git clone https://github.com/ton-utilisateur/TopicClassifier.git
+   git clone https://github.com/AntoineHeureux/NewsTopicClassifier
    cd TopicClassifier
 2. Lancer l'environnement virtuel:
     ```bash
    venv\Scripts\activate
+   pip install -r requirements.txt
 3. Télécharger les modèles LLM:
    ```bash
    python download_models.py
@@ -26,4 +27,5 @@ Pour plus d'information sur la mise en place des modèles et leur évalution, ve
 5. Lancer l'application React:
    ```bash
    cd frontend
+   npm install
    npm start
