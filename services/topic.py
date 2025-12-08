@@ -23,7 +23,7 @@ classifier = pipeline(
     model=OUT_DIR,
     tokenizer=tokenizer,
     device=device,
-    multi_label=False,
+    multi_label=True,
     dtype=torch.float16 if torch.cuda.is_available() else torch.float32
 )
 def get_topic(text: str) -> str:
@@ -32,4 +32,5 @@ def get_topic(text: str) -> str:
     candidate_labels=zeroshot_topic_list,
     hypothesis_template="Ce texte parle de {}."
     )
+    print(result)
     return result['labels'][0]
